@@ -1,0 +1,159 @@
+/* Deep Dynamic Design Variables */
+:root {
+  --bg-primary: #030712;
+  --bg-card: rgba(17, 24, 39, 0.95);
+  --header-bg: #030712;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --input-bg: #1f2937;
+  --text-brand: #f9fafb;
+  --text-sub: #9ca3af;
+}
+
+/* Updated Cream & Warm Theme for Light Mode */
+html.light {
+  --bg-primary: #FDFBF7; /* Rich Cream Background */
+  --bg-card: #FFFFFF;    /* Pure White Cards on Cream BG */
+  --header-bg: #FDFBF7;  /* Solid Cream Header */
+  --border-color: #E7E2D8; /* Soft warm border */
+  --input-bg: #F4F0EA;   /* Light cream input fields */
+  --text-brand: #1C1917; /* Deep warm black for text */
+  --text-sub: #57534E;   /* Dark brown/gray for subtext */
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-brand);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Fix */
+.header-glass {
+  background-color: var(--header-bg) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.card-bg {
+  background-color: var(--bg-card) !important;
+}
+
+.card-border {
+  border-color: var(--border-color);
+}
+
+.text-brand {
+  color: var(--text-brand) !important;
+}
+
+.text-sub {
+  color: var(--text-sub) !important;
+}
+
+.input-field {
+  background-color: var(--input-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-brand) !important;
+  transition: all 0.2s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #f43f5e !important;
+  box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.15);
+}
+
+.hero-banner {
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.2) 0%, rgba(3, 7, 18, 0.95) 100%), 
+              url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+}
+
+.theme-toggle-btn {
+  background-color: var(--input-bg);
+  border-color: var(--border-color);
+  color: var(--text-brand);
+}
+
+.nav-link {
+  color: var(--text-sub) !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #f43f5e !important;
+}
+
+.cat-btn {
+  background-color: var(--input-bg);
+  color: var(--text-sub) !important;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.cat-btn:hover, .cat-btn.active {
+  background-color: #f43f5e !important;
+  color: #ffffff !important;
+}
+
+/* Light Theme Specific Text Fixes */
+html.light #loginBtn {
+  color: #ffffff !important;
+  background-color: #f43f5e !important;
+}
+
+html.light .bg-card {
+  background-color: #FFFFFF !important;
+}
+
+/* Modal Popup Solid Background Fix */
+#authModal > div, 
+#itemModal > div, 
+#cartDrawer > div:nth-child(2), 
+#privacyModal > div, 
+#termsModal > div {
+  background-color: var(--bg-card) !important;
+  color: var(--text-brand) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+#authModal, #itemModal, #cartDrawer, #privacyModal, #termsModal {
+  z-index: 1000;
+}
+
+/* Menu Card Styling */
+.menu-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  background-color: var(--bg-card) !important;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+/* Cream theme me hero banner ka text hamesha white dikhega */
+html.light .hero-banner h1,
+html.light .hero-banner p,
+html.light .hero-banner span {
+  color: #ffffff !important;
+}
+
+html.light .hero-banner {
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.4) 0%, rgba(3, 7, 18, 0.85) 100%), 
+              url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat !important;
+}
